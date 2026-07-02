@@ -20,8 +20,9 @@ const DashBoardLayout = ({ children }) => {
         ></label>
         <ul className="menu bg-base-200 min-h-full w-80 p-4">
           {/* Sidebar content here */}
-          <li><Link href="./revenue">Revenue</Link> </li>
-          <li><Link href="./profile">Profile</Link> </li>
+          
+          <li><Link href="/dashboard/revenue">Revenue</Link> </li>
+          <li><Link href="/dashboard/profile">Profile</Link> </li>
         </ul>
       </div>
     </div>
