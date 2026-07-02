@@ -1,5 +1,5 @@
 
-const AcoutPage = () => {
+const AboutPage = () => {
     return (
         <div>
             <h1 className="text-2xl">This is an about page</h1>
@@ -7,4 +7,4 @@ const AcoutPage = () => {
     );
 };
 
-export default AcoutPage;
+export default AboutPage;
