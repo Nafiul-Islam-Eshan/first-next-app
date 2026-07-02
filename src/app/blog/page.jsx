@@ -54,7 +54,7 @@ const Blog = () => {
         {blogs.map((blog) => (
           <div key={blog.id} className="border-2 border-b-fuchsia-400 shadow-lg shadow-fuchsia-300 p-3 rounded-2xl ">
             <h2 className="text-3xl font-bold">{blog.title}</h2>
-            <Link href="/">Show Details</Link>
+            <Link href={`../blog/${blog.id}`}>Show Details</Link>
           </div>
         ))}
       </div>
