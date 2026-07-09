@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Dashboard',
+  description: 'This is dashboard',
+}
+
 const DashboardPage = () => {
     return (
         <div>

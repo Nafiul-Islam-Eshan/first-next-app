@@ -1,24 +1,65 @@
+"use client";
+import { Sansation } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
+const sansation = Sansation({
+  weight: "400",
+  subsets: ["latin"],
+});
 const Navbar = () => {
+  const pathname = usePathname();
+
   const links = (
     <>
       <li>
-        <Link href="../about">About</Link>
+        <Link
+          className={pathname == "/about" ? "text-cyan-500" : ""}
+          href="../about"
+        >
+          About
+        </Link>
       </li>
       <li>
-        <Link href="../Contact">Contact</Link>
+        <Link
+          className={pathname == "/Contact" ? "text-cyan-500" : ""}
+          href="../Contact"
+        >
+          Contact
+        </Link>
       </li>
       <li>
-        <Link href="../blog" >Blogs</Link>
+        <Link
+          className={pathname == "/blog" ? "text-cyan-500" : ""}
+          href="../blog"
+        >
+          Blogs
+        </Link>
       </li>
-      <li> <Link href="/dashboard" >Dashboard</Link> </li>
-      <li> <Link href="/users" >Users</Link> </li>
+      <li>
+        {" "}
+        <Link
+          className={pathname == "/dashboard" ? "text-cyan-500" : ""}
+          href="/dashboard"
+        >
+          Dashboard
+        </Link>{" "}
+      </li>
+      <li>
+        {" "}
+        <Link
+          className={pathname == "/users" ? "text-cyan-500" : ""}
+          href="/users"
+        >
+          Users
+        </Link>{" "}
+      </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className={sansation.className}>
+      <div className="navbar bg-base-100 shadow-sm" >
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,21 +82,21 @@ const Navbar = () => {
           <ul
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-             
           >
             {links}
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">Home</Link>
+        <Link href="/" className="btn btn-ghost text-xl">
+          Home
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>
       </div>
+    </div>
     </div>
   );
 };
