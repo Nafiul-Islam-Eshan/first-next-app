@@ -55,6 +55,15 @@ const Navbar = () => {
           Users
         </Link>{" "}
       </li>
+      <li>
+        {" "}
+        <Link
+          className={pathname == "/foods" ? "text-cyan-500" : ""}
+          href="/foods"
+        >
+          Foods
+        </Link>{" "}
+      </li>
     </>
   );
   return (
