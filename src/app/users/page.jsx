@@ -1,5 +1,4 @@
 import Initiates from "@/Components/Initiates";
-import { use } from "react";
 
 export const metadata = {
   title: 'Users',
