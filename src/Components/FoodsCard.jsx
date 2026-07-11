@@ -3,7 +3,6 @@ import { CiBookmark } from "react-icons/ci";
 
 const FoodsCard = ({ food }) => {
   const { price, dish_name, category, image_link } = food;
-  console.log(food);
   return (
     <div>
       <div className="flex flex-col justify-center items-center w-auto h-70 gap-5 p-5 bg-gray-800 rounded-lg md:flex-row">
@@ -29,11 +28,8 @@ const FoodsCard = ({ food }) => {
           </div>
           {/* buy and add to card button */}
           <div className="flex justify-around items-center my-2">
-            <button className="px-2 bg-blue-600 p-1 rounded-md text-white font-semibold shadow-xl shadow-blue-500/50 hover:ring-2 ring-blue-400 hover:scale-75 duration-500">
-              Buy Now
-            </button>
             <button className="px-2 border-2 border-white p-1 rounded-md text-white font-semibold shadow-lg shadow-white hover:scale-75 duration-500">
-              Add to Cart
+              More Details
             </button>
           </div>
         </div>
