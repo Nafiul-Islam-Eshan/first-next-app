@@ -14,6 +14,7 @@ const FoodsCard = ({ food }) => {
             width={100}
             height={100}
             style={{ height: "120%", width: "80%" }}
+            className=" duration-700 hover:scale-130"
           ></Image>
         </div>
         <div className="flex-2 max-w-sm h-auto space-y-3">
