@@ -27,7 +27,7 @@ const FoodsCard = ({ food }) => {
           <div className="flex gap-6 items-center justify-center">
             <p className="text-white font-bold text-lg">${price}</p>
           </div>
-          {/* buy and add to card button */}
+          {/* Show detail button */}
           <div className="flex justify-around items-center my-2">
             <Link href={`../foods/${id}`} className="px-2 border-2 border-white p-1 rounded-md text-white font-semibold shadow-lg shadow-white hover:scale-75 duration-500">
               Show Details 
