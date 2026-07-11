@@ -6,9 +6,9 @@ export const metadata = {
 };
 
 const foodsPage = async () => {
-  const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods");
+  const url = "https://phi-lab-server.vercel.app/api/v1/lab/foods"
+  const res = await fetch(url);
   const { data: foods } = await res.json();
-  // console.log(foods);
   return (
     <div className="max-w-7xl mx-auto my-4">
       <h1 className="text-3xl text-neutral-400">Foods : {foods.length}</h1>
