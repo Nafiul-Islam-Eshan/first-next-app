@@ -9,13 +9,13 @@ const FoodsCard = ({ food }) => {
       <div className="flex flex-col justify-center items-center w-auto h-70 gap-5 p-5 bg-gray-800 rounded-lg md:flex-row">
         <div className="flex flex-1 justify-center items-center w-65 h-30 p-5 bg-linear-to-r from-green-400 to-[#002Ff9] rounded-lg hover:-translate-y-10 duration-700 hover:scale-125 overflow-hidden">
           <Image
-            src={image_link}
-            alt={dish_name}
             width={100}
             height={100}
-            style={{ height: "120%", width: "80%" }}
+            src={image_link}
+            alt={dish_name}
+            // style={{ height: "120%", width: "80%" }}
             className=" duration-700 hover:scale-130"
-          ></Image>
+          />
         </div>
         <div className="flex-2 max-w-sm h-auto space-y-3">
           <div className="flex justify-center items-center sm:justify-between">

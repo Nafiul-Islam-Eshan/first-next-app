@@ -1,9 +1,24 @@
 import Image from "next/image";
 
+// const getFoodData = async ({foodId}) => {
+//   const url = `https://phi-lab-server.vercel.app/api/v1/lab/foods/${foodId}`;
+//   try {
+//     const res = await fetch(url);
+//     if(!res.ok){
+//       throw new Error ("Something Wrong");
+//     }
+//     const data = await res.json();
+//     return data;
+
+//   } catch (error) {
+//     return error
+//   }
+// }
+
 const FoodDetailsPage = async ({ params }) => {
   const { foodId } = await params;
   //  Foods Data fetching
-  const url = "https://phi-lab-server.vercel.app/api/v1/lab/foods";
+  const url = `https://phi-lab-server.vercel.app/api/v1/lab/foods/${foodId}`;
   const res = await fetch(url);
   const { data: foods } = await res.json();
   // check if api food id and route food id are same
@@ -18,8 +33,8 @@ const FoodDetailsPage = async ({ params }) => {
             <div className="flex items-center mb-4">
               <div className="w-50 h-50 md:w-60 md:h-60 lg:w-70 lg:h-70 rounded-xl shadow-lg border-2 border-white/20 bg-blue-500 flex items-center justify-center text-white font-bold text-[0.6rem] leading-tight mx-auto">
                 <Image
-                  width={50}
-                  height={50}
+                  width={40}
+                  height={40}
                   src={image_link}
                   alt={dish_name}
                 ></Image>
@@ -163,12 +178,9 @@ const FoodDetailsPage = async ({ params }) => {
               </div>
             </div>
           </div>
-          ) : (
-          <h2 className="text-2xl text-rose-500">Food Item is not available</h2>
-          )
         </div>
       ) : (
-        <div className="text-2xl text-rose-400">Food item not available</div>
+        <h2 className="text-2xl text-rose-500">Food Item is not available</h2>
       )}
     </div>
   );

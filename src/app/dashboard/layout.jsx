@@ -5,7 +5,7 @@ import React from "react";
 
 const DashBoardLayout = ({ children }) => {
   const pathname = usePathname;
-  console.log(pathname);
+  // console.log(pathname);
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />

@@ -18,7 +18,7 @@ const usersPage = async () => {
           let { name, username, email, phone, website, address, company } = user;
           let {street, suite, city, zipcode} = address
           return (
-            <>
+
               <div
                 key={user.id}
                 class="card w-80 h-auto bg-[#07182E] rounded-2xl overflow-hidden relative transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,183,255,0.5)]"
@@ -70,7 +70,7 @@ const usersPage = async () => {
 
                 </div>
               </div>
-            </>
+
           );
         })}
       </div>

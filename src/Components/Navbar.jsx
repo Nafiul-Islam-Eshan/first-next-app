@@ -3,6 +3,7 @@ import { Sansation } from "next/font/google";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const sansation = Sansation({
   weight: "400",
@@ -103,7 +104,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <ThemeToggleButton/>
       </div>
     </div>
     </div>
